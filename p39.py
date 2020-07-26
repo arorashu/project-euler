@@ -18,9 +18,9 @@ bestP = 1
 # a^2 + b^2 = (p - (a+b))^2
 # a^2 + b^2 = p^2 + a^2 + b^2 + 2ab + - 2ap - 2bp 
 # 
-for p in range(10, 1001):
+for p in range(10, 1001, 2):
     res = set()
-    for a in range(1, p):
+    for a in range(1, int(p/2)):
         for b in range(a, p):
             if (p*p - 2*p*(a+b) + 2*a*b) == 0:
                 tempC = int(math.sqrt(a*a + b*b))
